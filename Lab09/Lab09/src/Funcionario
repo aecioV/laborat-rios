@@ -1,0 +1,39 @@
+public class Funcionario {
+    private String nome;
+    private double salario;
+    private static double valeRefeicaoDiario = 15.0;
+
+        public Funcionario(String nome, double salariom){
+            this.nome = nome;
+            this.salario = salario;
+        }
+
+        public String getNome(){
+            return this.nome;
+        }
+       
+        public void setNome(String nome){
+            this.nome = nome;
+        }
+        
+        public double getSalario(){
+            return this.salario;
+        }
+        
+        public void setSalario(double salario){
+            this.salario = salario;
+        }
+
+        public static void reajustaValeRefeicaoDiario(double percentual) {
+            double novoValor = valeRefeicaoDiario * (1 + percentual / 100.0);
+            valeRefeicaoDiario = novoValor;
+        }
+
+        public static double getValeRefeicaoDiario() {
+            return valeRefeicaoDiario;
+        }
+    
+       
+    
+
+    }
