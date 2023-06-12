@@ -1,0 +1,31 @@
+public class ISimpleStackDemo {
+    public static void main(String[] args) {
+    
+        ISimpleStack pilha1 = new DynamicStack(5);
+        ISimpleStack pilha2 = new FixedLengthStack(10);
+
+        
+        pilha1.push('A');
+        pilha1.push('B');
+        pilha1.push('C');
+
+        System.out.println("Pilha1 - Elemento removido: " + pilha1.pop()); 
+        System.out.println("Pilha1 - Elemento no topo: " + pilha1.peek());
+        System.out.println("Pilha1 - Tamanho: " + pilha1.size()); 
+        System.out.println("Pilha1 - Vazia? " + pilha1.isEmpty()); 
+
+    
+        pilha2.push('X');
+        pilha2.push('Y');
+        pilha2.push('Z');
+
+        System.out.println("Pilha2 - Elemento removido: " + pilha2.pop()); 
+        System.out.println("Pilha2 - Elemento no topo: " + pilha2.peek()); 
+        System.out.println("Pilha2 - Tamanho: " + pilha2.size()); 
+        System.out.println("Pilha2 - Vazia? " + pilha2.isEmpty()); 
+
+       
+        pilha1.reset();
+        System.out.println("Pilha1 - Tamanho após resetar: " + pilha1.size()); 
+        System.out.println("Pilha1 - Vazia após resetar? " + pilha1.isEmpty()); 
+}
